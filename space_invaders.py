@@ -77,7 +77,7 @@ def run_game():
     stats = GameStats(ai_settings, high_scores)
     sb = Scoreboard(ai_settings, screen, stats)
 
-    # Make a ship, a group of bullets, and a group of aliens
+    # Make a ship, a group of bullets, and a group of aliens, and ufo group
     bullets_ship = Group()
     bullets_alien = Group()
     bunker1 = Group()
@@ -97,8 +97,10 @@ def run_game():
     gf.create_bunker(screen, 2, bunker2)
     gf.create_bunker(screen, 3, bunker3)
 
+    # create ship
     ship = Ship(ai_settings, screen)
 
+    # add music
     pygame.mixer.set_reserved(0)
     pygame.mixer.set_reserved(1)
     pygame.mixer.set_reserved(2)

@@ -78,7 +78,7 @@ def check_play_button(ai_settings, screen, stats, sb, play_button,
         sb.prep_level()
         sb.prep_ships()
 
-        # empty the list of aliens and bullets
+        # empty the list of aliens, bullets, bunkers
         aliens.empty()
         ufo_group.empty()
         bullets_ship.empty()
@@ -87,7 +87,7 @@ def check_play_button(ai_settings, screen, stats, sb, play_button,
         bunker2.empty()
         bunker3.empty()
 
-        # create a new fleet and center the ship
+        # create a new fleet, center the ship, rebuild bunkers
         create_fleet(ai_settings, screen, stats, alien_type, points, aliens,
                      ufo_imgs, ufo_group)
         ship.center_ship()
@@ -194,7 +194,7 @@ def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets_ship, bu
     # draw the score info
     sb.show_score()
 
-    # draw the play button if the game is inactive
+    # draw the main menu and scoreboard if the game is inactive
     if not stats.game_active:
         if stats.main_menu:
             screen.fill(ai_settings.bg_color)
@@ -299,8 +299,8 @@ def check_bullet_bullet_collisions(bullets_alien, bullets_ship):
 
 
 def check_alien_bunker_collisions(aliens, bunker1, bunker2, bunker3):
-    # respond to bullet bullet collisions
-    # remove any bullets that have collided
+    # respond to alien bunker collisions
+    # remove any bunker that have collided
     pygame.sprite.groupcollide(aliens, bunker1, False, True)
     pygame.sprite.groupcollide(aliens, bunker2, False, True)
     pygame.sprite.groupcollide(aliens, bunker3, False, True)
@@ -361,8 +361,8 @@ def check_bullet_ship_collisions(ai_settings, screen, stats, sb, ship,
                                  alien_type, points, aliens, bullets_alien,
                                  bullets_ship, high_scores, bunker1, bunker2, bunker3,
                                  ufo_imgs, ufo_group, ship_exp):
-    # respond to bullet alien collisions
-    # remove any bullets and aliens that have collided
+    # respond to bullet ship collisions
+    # remove any bullets that have collided
     collisions = pygame.sprite.spritecollide(ship, bullets_alien, True)
 
     if collisions:
@@ -373,8 +373,8 @@ def check_bullet_ship_collisions(ai_settings, screen, stats, sb, ship,
 
 def check_bullet_ufo_collisions(stats, sb, ai_settings, bullets_ship, ufo_group,
                                 alien_exp):
-    # respond to bullet alien collisions
-    # remove any bullets and aliens that have collided
+    # respond to bullet ufo collisions
+    # remove any bullets and ufo that have collided
     for ufo in ufo_group:
         if ufo.explode is False:
             collision = pygame.sprite.groupcollide(bullets_ship, ufo_group, True, False)
@@ -395,7 +395,7 @@ def check_bullet_ufo_collisions(stats, sb, ai_settings, bullets_ship, ufo_group,
 
 def check_bullet_bunker_collisions(bullets_alien, bullets_ship, bunker1, bunker2, bunker3):
     # respond to bullet bunker collisions
-    # remove any bullets and aliens that have collided
+    # remove any bullets and damage bunker that have collided
     collisions1 = pygame.sprite.groupcollide(bunker1, bullets_alien, False, True)
     collisions2 = pygame.sprite.groupcollide(bunker2, bullets_alien, False, True)
     collisions3 = pygame.sprite.groupcollide(bunker3, bullets_alien, False, True)

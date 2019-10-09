@@ -11,7 +11,7 @@ class Ship(Sprite):
         self.screen = screen
         self.ai_settings = ai_settings
 
-        # load the ship image and get its rect; image from book link
+        # load the ship image and get its rect; load explosion frames
         self.image = pygame.image.load('images/ship.bmp')
         self.explode_frames = ['images/ship_exp_1.bmp', 'images/ship_exp_2.bmp',
                                'images/ship_exp_3.bmp', 'images/ship_exp_4.bmp',
@@ -29,6 +29,7 @@ class Ship(Sprite):
         # store a decimal value for a ship's center
         self.center = float(self.rect.centerx)
 
+        # ship explode or not
         self.explode = False
 
         # Movement flags

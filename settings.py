@@ -39,15 +39,18 @@ class Settings:
         self.alien_points = None
         self.initialize_dynamic_settings()
 
+        # interval bullets will shoot
         self.alien_bullet_counter = None
         self.alien_bullet_rate = None
         self.alien_bullet_rate_increase = .95
 
+        # interval ufo appears
         self.ufo_counter = None
         self.ufo_limit = None
         self.ufo_exp_count = None
         self.ufo_exp_limit = None
 
+        # music currently playing
         self.bg_1_playing = True
         self.bg_2_playing = False
         self.bg_3_playing = False

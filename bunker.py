@@ -3,10 +3,10 @@ from pygame.sprite import Sprite
 
 
 class Bunker(Sprite):
-    # a class to represent a single alien in the fleet
+    # a class to represent a bunker
 
     def __init__(self, screen, frames, top, left):
-        # initialize the alien and set its start position
+        # initialize a bunker and set its start position
         super(Bunker, self).__init__()
         self.screen = screen
         self.hits = 0
@@ -21,10 +21,6 @@ class Bunker(Sprite):
         # spawn bunker at assigned location
         self.rect.top = top
         self.rect.left = left
-
-    #def blitme(self):
-    #    # draw the alien at its current position
-    #    self.screen.blit(self.image, self.rect)
 
     def update(self):
         # swap image

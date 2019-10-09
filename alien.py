@@ -25,6 +25,7 @@ class Alien(Sprite):
         # store the alien's exact position
         self.x = float(self.rect.x)
 
+        # explode or not
         self.explode = False
 
         # points value

@@ -2,10 +2,9 @@ import pygame
 
 
 class Image:
-    # a class to represent a single alien in the fleet
+    # a class to represents aliens on a start screen
 
     def __init__(self, screen, alien_type, rectx, recty):
-        # initialize the alien and set its start position
         self.screen = screen
 
         # load the alien image and set its rect attribute
