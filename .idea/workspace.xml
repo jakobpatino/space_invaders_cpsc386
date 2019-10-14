@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="420f38e6-2dc5-4680-bab8-ed58f30ca815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunker.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/space_invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/space_invaders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ufo.py" beforeDir="false" afterPath="$PROJECT_DIR$/ufo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/high_scores.py" beforeDir="false" afterPath="$PROJECT_DIR$/high_scores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/high_scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/high_scores.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

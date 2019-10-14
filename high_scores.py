@@ -1,3 +1,6 @@
+import os.path
+
+
 class HighScores:
 
     def __init__(self):
@@ -26,7 +29,8 @@ class HighScores:
                         self.high_scores[y + 1], self.high_scores[y]
 
     def read_scores(self):
-        file = open("high_scores.txt", "r")
-        for x in range(10):
-            self.high_scores[x] = int(file.readline())
-        file.close()
+        if os.path.isfile('high_scores.txt'):
+            file = open("high_scores.txt")
+            for x in range(10):
+                self.high_scores[x] = int(file.readline())
+            file.close()
